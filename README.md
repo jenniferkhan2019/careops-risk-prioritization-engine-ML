@@ -1,4 +1,4 @@
-## Care-Gap Prioritization - Care Manager Dashboard
+## Care-Gap Prioritization - CM Dashboard
 
 ## Use Case Scenario
 
