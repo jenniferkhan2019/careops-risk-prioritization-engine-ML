@@ -69,7 +69,7 @@ The data is **fully synthetic and contains no PHI**.
 - `data/data_dictionary.csv` — column definitions and analytics roles
 - `src/validate_dataset.py` — lightweight dataset validation script
 
-## Dataset
+## Technology Stack
 Python, Pandas, NumPy, Matplotlib, scikit-learn, Logistic Regression, Jupyter
 
 - For the complete executable analysis, see the Jupyter Notebook.
