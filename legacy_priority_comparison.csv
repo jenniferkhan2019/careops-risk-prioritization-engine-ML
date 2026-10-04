@@ -1,0 +1,5 @@
+legacy_priority,patients,avg_analytic_score,high_risk_rate,acute_event_rate,avg_open_gaps
+P1,287,29.0,14.3,6.3,1.58
+P2,667,26.8,8.8,4.3,1.56
+P3,916,26.7,8.8,5.1,1.55
+P4,630,25.8,8.7,3.0,1.51

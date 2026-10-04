@@ -1,0 +1,21 @@
+analytic_rank,patient_id,care_manager_id,analytic_priority_score,analytic_priority_band,legacy_priority,risk_tier,task_type,open_care_gap_count,recent_discharge_30d_flag,ed_visits_90d,inpatient_admits_12m,medication_adherence_gap,sdoh_positive_count,symptom_change_reported_flag,unanswered_outreach_30d,sla_overdue_flag,provider_message_pending_flag
+1,PT-001385,CM-012,100,Critical,P4,High,Patient Education,4,1,2,1,1,2,1,0,0,1
+2,PT-001117,CM-006,97,Critical,P2,High,Post-Discharge Follow-up,6,1,0,1,1,0,1,3,0,0
+4,PT-001548,CM-016,96,Critical,P3,High,Care Gap Closure,5,1,1,4,0,1,0,3,1,0
+3,PT-000441,CM-010,96,Critical,P2,High,Social Resource Referral,2,1,6,0,1,2,1,0,1,0
+5,PT-001939,CM-014,95,Critical,P3,High,Social Resource Referral,4,1,2,0,1,3,0,0,0,1
+6,PT-000043,CM-014,94,Critical,P3,High,Care Gap Closure,4,1,6,0,1,2,0,2,1,0
+8,PT-002122,CM-016,92,Critical,P1,High,Post-Discharge Follow-up,5,1,1,1,1,1,0,1,1,0
+7,PT-001232,CM-002,92,Critical,P2,High,Patient Outreach,4,1,2,0,0,2,0,4,1,0
+9,PT-001162,CM-011,91,Critical,P3,High,Social Resource Referral,3,1,6,0,1,1,0,1,0,1
+10,PT-001207,CM-001,91,Critical,P3,High,Care Gap Closure,3,1,4,5,0,0,0,1,1,0
+11,PT-000041,CM-012,90,Critical,P2,High,Post-Discharge Follow-up,5,1,2,0,1,0,0,0,0,0
+12,PT-001976,CM-006,89,Critical,P4,High,Patient Outreach,4,1,1,0,0,1,1,0,1,1
+13,PT-000254,CM-002,88,Critical,P2,High,Post-Discharge Follow-up,4,1,6,0,1,0,0,5,0,0
+14,PT-001389,CM-007,87,Critical,P2,High,Care Plan Update,3,1,4,0,1,1,0,0,1,0
+15,PT-001439,CM-001,86,Critical,P3,High,Care Gap Closure,3,0,1,1,1,3,1,1,1,0
+16,PT-000736,CM-007,85,Critical,P4,High,Care Plan Update,3,1,2,2,0,1,0,2,1,0
+18,PT-000902,CM-014,84,Critical,P4,High,Post-Discharge Follow-up,5,1,0,0,1,0,0,2,1,0
+17,PT-000533,CM-014,84,Critical,P4,High,Social Resource Referral,3,0,6,0,1,2,1,0,1,0
+20,PT-001475,CM-011,83,Critical,P1,High,Care Gap Closure,5,1,0,1,1,0,0,0,1,1
+21,PT-002215,CM-015,83,Critical,P3,High,Post-Discharge Follow-up,4,0,6,1,1,2,1,2,0,0

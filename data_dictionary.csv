@@ -1,0 +1,74 @@
+column_name,category,data_type,description,allowed_values_or_range,analytics_role
+snapshot_date,Identifier/Time,date,Daily workload snapshot date.,YYYY-MM-DD,Index
+patient_id,Identifier,string,Synthetic patient/member identifier; contains no PHI.,PT-######,Key
+care_manager_id,Identifier,string,Synthetic care manager assignment.,CM-###,Grouping
+source_system,Operations,category,Primary source contributing the work item.,CareMgmt/Claims/EHR/Pharmacy/HIE,Feature
+region,Demographic,category,Broad synthetic operating region.,5 broad regions,Feature
+insurance_product,Coverage,category,Synthetic line of business/product.,MA/Dual/Medicaid/Commercial,Feature
+age,Demographic,integer,Patient age in years.,18-95,Feature
+sex,Demographic,category,Administrative sex used only for synthetic analysis.,Female/Male,Feature
+preferred_language,Engagement,category,Preferred communication language; may be Unknown.,English/Spanish/Bengali/Chinese/Russian/Other/Unknown,Feature
+preferred_contact_channel,Engagement,category,Preferred outreach channel.,Phone/SMS/Portal/Caregiver,Feature
+diabetes_flag,Clinical/Care Gap,binary,Patient has diabetes.,0/1,Core Feature
+hypertension_flag,Clinical/Care Gap,binary,Patient has hypertension.,0/1,Core Feature
+chf_flag,Clinical/Care Gap,binary,Patient has congestive heart failure.,0/1,Core Feature
+copd_flag,Clinical/Care Gap,binary,Patient has COPD.,0/1,Core Feature
+ckd_flag,Clinical/Care Gap,binary,Patient has chronic kidney disease.,0/1,Core Feature
+depression_flag,Clinical/Care Gap,binary,Patient has depression.,0/1,Core Feature
+cad_flag,Clinical/Care Gap,binary,Patient has coronary artery disease.,0/1,Core Feature
+active_cancer_flag,Clinical/Care Gap,binary,Patient has active cancer.,0/1,Core Feature
+frailty_flag,Clinical/Care Gap,binary,Patient has a synthetic frailty indicator.,0/1,Core Feature
+chronic_condition_count,Clinical,integer,Count of modeled chronic conditions.,0-8,Feature
+hcc_risk_score,Clinical Risk,float,Synthetic HCC-like relative risk score for portfolio use; not an official CMS score.,0.2-4.5,Feature
+risk_tier,Clinical Risk,category,Current operational risk tier based on synthetic rule.,Low/Medium/High,Feature
+ed_visits_90d,Utilization,integer,Emergency department visits in prior 90 days.,0-6,Feature
+observation_stays_90d,Utilization,integer,Observation stays in prior 90 days.,0-4,Feature
+inpatient_admits_12m,Utilization,integer,Inpatient admissions in prior 12 months.,0-5,Feature
+recent_discharge_30d_flag,Transitions,binary,1 if patient had inpatient discharge in prior 30 days.,0/1,Feature
+days_since_discharge,Transitions,integer/blank,Days since discharge; blank if no recent discharge.,1-30 or blank,Feature
+a1c_value,Clinical,float/blank,Most recent synthetic A1C result; typically blank for non-diabetic patients or missing labs.,5.2-13.5 or blank,Feature
+systolic_bp,Clinical,integer,Most recent synthetic systolic blood pressure.,90-210,Feature
+a1c_overdue_gap,Clinical/Care Gap,binary,Diabetes care gap: A1C testing is overdue.,0/1,Core Feature
+retinal_exam_gap,Clinical/Care Gap,binary,Diabetes care gap: retinal exam is overdue.,0/1,Core Feature
+nephropathy_screen_gap,Clinical/Care Gap,binary,Diabetes care gap: kidney/nephropathy screening is overdue.,0/1,Core Feature
+bp_control_gap,Clinical/Care Gap,binary,Hypertension care gap: latest systolic BP is uncontrolled (>=140).,0/1,Core Feature
+med_reconciliation_gap,Clinical/Care Gap,binary,"Medication reconciliation gap, especially relevant after discharge.",0/1,Core Feature
+post_discharge_followup_gap,Clinical/Care Gap,binary,Transition-of-care gap: timely post-discharge follow-up is open.,0/1,Core Feature
+preventive_screening_gap,Clinical/Care Gap,binary,Age/eligibility-based preventive screening gap is open.,0/1,Core Feature
+vaccination_gap,Clinical/Care Gap,binary,Recommended vaccination gap is open.,0/1,Core Feature
+behavioral_health_followup_gap,Clinical/Care Gap,binary,Behavioral-health follow-up gap is open.,0/1,Core Feature
+statin_therapy_gap,Clinical/Care Gap,binary,Statin-related guideline gap is open for eligible synthetic patients.,0/1,Core Feature
+medication_count,Medication,integer,Active medication count.,0-20,Feature
+medication_pdc,Medication,float,Synthetic proportion of days covered.,0.35-1.00,Feature
+medication_adherence_gap,Clinical/Care Gap,binary,Medication adherence gap: PDC < 0.80 for patients with >=2 medications.,0/1,Core Feature
+refill_due_7d_flag,Medication,binary,1 if a medication refill is due within 7 days.,0/1,Feature
+food_insecurity,SDOH,category,Synthetic food insecurity screening result.,Yes/No/Unknown,Feature
+transportation_barrier,SDOH,category,Synthetic transportation barrier screening result.,Yes/No/Unknown,Feature
+housing_instability,SDOH,category,Synthetic housing instability screening result.,Yes/No/Unknown,Feature
+social_isolation,SDOH,category,Synthetic social isolation screening result.,Yes/No/Unknown,Feature
+financial_strain,SDOH,category,Synthetic financial strain screening result.,Yes/No/Unknown,Feature
+sdoh_positive_count,SDOH,integer,Count of SDOH domains marked Yes.,0-5,Feature
+last_contact_date,Communication,date/blank,Most recent successful care-manager contact date.,YYYY-MM-DD or blank,Feature
+days_since_last_contact,Communication,integer,Days since last care-manager contact.,0-120,Feature
+unanswered_outreach_30d,Communication,integer,Unanswered outreach attempts in prior 30 days.,0-6,Feature
+scheduled_call_today_flag,Communication,binary,1 if patient has a scheduled call/check-in today.,0/1,Workload
+symptom_change_reported_flag,Communication,binary,1 if recent symptom change was reported.,0/1,Feature
+community_resource_referral_open_flag,Care Coordination,binary,1 if social/community referral remains open.,0/1,Feature
+home_health_need_flag,Care Coordination,binary,1 if home-health need is identified.,0/1,Feature
+transportation_service_needed_flag,Care Coordination,binary,1 if transportation support is currently needed.,0/1,Feature
+specialist_appointment_pending_flag,Care Coordination,binary,1 if specialist appointment remains pending.,0/1,Feature
+provider_message_pending_flag,Provider Collaboration,binary,1 if provider response/collaboration item is pending.,0/1,Feature
+specialist_count,Provider Collaboration,integer,Number of specialists involved in care.,0-8,Feature
+care_plan_status,Administration,category,Current care-plan maintenance state.,Current/Needs Review/Overdue/Not Started,Feature
+care_plan_days_since_update,Administration,integer/blank,Days since care-plan update; blank if not started.,2-360 or blank,Feature
+documentation_note_backlog,Administration,integer,Count of pending documentation notes.,0-7,Feature
+billing_activity_code_pending_flag,Administration,binary,1 if billing/activity coding remains pending.,0/1,Feature
+health_literacy,Education,category,Synthetic health-literacy assessment.,Adequate/Limited/Low/Unknown,Feature
+education_need,Education,category,Primary patient education need.,Multiple topics,Feature
+open_care_gap_count,Care Gaps,integer,Total count of open modeled care gaps.,0-11,Core Feature
+task_type,Workload,category,Primary care-manager work item for the snapshot.,8 task categories,Feature/Grouping
+task_age_days,Workload,integer,Age of the current work item in days.,0-30,Feature
+task_due_date,Workload,date,Due date of current work item.,YYYY-MM-DD,Feature
+sla_overdue_flag,Workload,binary,1 when the current task due date has passed.,0/1,Feature
+legacy_priority,Workload,category,Existing/legacy priority bucket intentionally made imperfect for later comparison.,P1-P4,Benchmark
+unplanned_acute_event_30d,Outcome,binary,Synthetic target: unplanned ED/inpatient event in the following 30 days.,0/1,Target
