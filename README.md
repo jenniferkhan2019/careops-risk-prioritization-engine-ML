@@ -1,4 +1,4 @@
-# Care Manager Care-Gap Prioritization
+## Care-Gap Prioritization - Care Manager Dashboard
 
 ## Use Case Scenario
 
@@ -10,6 +10,7 @@ A patient with one routine preventive gap should not necessarily receive the sam
 
 This project models a **care-gap-focused daily prioritization problem**. The dataset combines clinical risk indicators, utilization history, transition-of-care signals, care gaps, medication adherence, social determinants of health, communication history, care coordination needs, provider collaboration items, administrative workload, and education needs.
 
+## Business Problem to Solve
 The goal is to use Python analytics to help a care manager identify patients who may need more urgent attention and to organize the daily workload around **risk + care-gap burden + time sensitivity**, rather than simply processing tasks in first-in/first-out order.
 
 A later Python analysis can compare the existing `legacy_priority` against a newly derived priority score and can also model the synthetic outcome `unplanned_acute_event_30d`.
