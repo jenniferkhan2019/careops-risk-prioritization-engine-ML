@@ -1,23 +1,3 @@
-"""
-Care Manager Daily Workload & Care-Gap Prioritization Analysis
-==============================================================
-
-Portfolio project using fully synthetic, PHI-free healthcare data.
-
-Analysis:
-1. Data loading and quality checks
-2. Exploratory analysis
-3. Care-gap prevalence
-4. Business-rule patient prioritization score
-5. Comparison with legacy priority
-6. Logistic regression for synthetic 30-day acute-event outcome
-7. Model coefficients / drivers
-8. Output files and charts
-
-This code is for analytics learning and portfolio demonstration only.
-It is not clinical decision support.
-"""
-
 from pathlib import Path
 import pandas as pd
 import numpy as np
