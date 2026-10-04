@@ -12,44 +12,7 @@ This project models a **care-gap-focused daily prioritization problem**. The dat
 
 The goal is to use Python analytics to help a care manager identify patients who may need more urgent attention and to organize the daily workload around **risk + care-gap burden + time sensitivity**, rather than simply processing tasks in first-in/first-out order.
 
-## Business Problem
-
-Care managers often receive work items from multiple systems such as claims, EHR feeds, pharmacy data, care-management platforms, and health-information exchange sources. These work items may be individually valid but operationally fragmented.
-
-Without a consolidated prioritization view, the care manager may:
-
-- spend time on lower-risk tasks while a higher-risk patient waits;
-- miss time-sensitive post-discharge follow-up;
-- fail to see that several care gaps are accumulating for the same patient;
-- overlook medication adherence or refill concerns;
-- miss social barriers that make a care plan difficult to complete;
-- repeat unsuccessful outreach without changing strategy;
-- leave provider collaboration or community-resource referrals unresolved;
-- exceed internal service-level expectations for overdue work.
-
-### Business Objective
-
-Develop an analytical approach that ranks the daily patient workload so the care manager can focus first on patients with the greatest combination of:
-
-1. **Clinical risk and multimorbidity**
-2. **Recent acute-care utilization or discharge**
-3. **Open care gaps**
-4. **Medication adherence concerns**
-5. **Social determinants of health barriers**
-6. **Communication and engagement difficulty**
-7. **Pending care-coordination/provider actions**
-8. **Overdue or aging work items**
-
 A later Python analysis can compare the existing `legacy_priority` against a newly derived priority score and can also model the synthetic outcome `unplanned_acute_event_30d`.
-
-## Example Daily Care-Manager Activities
-
-- **Patient Communication:** scheduled calls/check-ins to review symptoms, medications, and treatment progress.
-- **Care Coordination:** connect patients with transportation, food support, home health, or other community resources.
-- **Provider Collaboration:** coordinate with PCPs, specialists, caregivers, and family members.
-- **Administrative Work:** document outreach, update care plans, and complete activity/billing codes.
-- **Patient Education:** explain diagnoses, medications, discharge instructions, and next steps in plain language.
-- **Care-Gap Closure:** identify and act on overdue monitoring, screenings, transition-of-care tasks, medication reconciliation, or other eligible gaps.
 
 ## Dataset
 
