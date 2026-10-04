@@ -69,29 +69,7 @@ The data is **fully synthetic and contains no PHI**.
 - `data/data_dictionary.csv` — column definitions and analytics roles
 - `src/validate_dataset.py` — lightweight dataset validation script
 
-## Suggested Python Analysis Roadmap
+## Dataset
+Python, Pandas, NumPy, Matplotlib, scikit-learn, Logistic Regression, Jupyter
 
-1. Load and profile the dataset.
-2. Identify missing/unknown values and data-quality issues.
-3. Explore the distribution of risk tiers and open care gaps.
-4. Compare care-gap burden by chronic condition and recent utilization.
-5. Analyze outreach failures, SDOH barriers, medication adherence, and overdue work.
-6. Build a care-manager priority score.
-7. Rank the morning work queue from highest to lowest priority.
-8. Compare the new score with `legacy_priority`.
-9. Build a logistic-regression model for `unplanned_acute_event_30d`.
-10. Evaluate precision, recall, ROC-AUC, and operational usefulness.
-11. Explain which variables drive risk and convert findings into care-manager actions.
-12. Create dashboard-ready summary tables or visualizations.
-
-## Important Note
-
-This repository is a portfolio/learning project. The data and risk logic are synthetic and should not be used for real clinical decision-making.
-
-## Executed Jupyter Notebook
-
-For a recruiter-friendly walkthrough with Python code, actual outputs, charts, and a healthcare business interpretation after each section, open:
-
-`notebooks/care_manager_care_gap_prioritization_analysis.ipynb`
-
-The notebook is committed with executed outputs so GitHub can render the full analysis directly.
+- For the complete executable analysis, see the Jupyter Notebook.
