@@ -1,6 +1,6 @@
 # Analysis Results
 
-## Executive Summary
+## Summary
 
 The analysis used 2,500 synthetic care-management workload records with 73 original variables.
 
@@ -58,4 +58,4 @@ The project demonstrates an end-to-end analytics workflow:
 8. Evaluate the model using metrics appropriate for an imbalanced healthcare outcome.
 9. Translate analytical findings into operational care-manager actions.
 
-**Important:** All data and outcomes are synthetic and this project is not clinical decision support.
+**Important:** All data and outcomes used in this project are purely synthetic. The dataset has been de-identified and contains no Protected Health Information (PHI).
